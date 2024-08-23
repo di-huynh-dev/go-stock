@@ -1,4 +1,4 @@
-import { Zap } from 'lucide-react'
+import { LogInIcon, Zap } from 'lucide-react'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -101,24 +101,24 @@ const Header = () => {
             </SheetTrigger>
           </div>
           <SheetContent className="md:w-1/3 w-1/2">
-            <Link href="/" className="flex gap-2 items-center my-2">
+            <Link href="/" className="flex gap-4 items-center my-2">
               <House />
               <SheetTitle className="text-md">Home</SheetTitle>
             </Link>
-            <Link href="/" className="flex gap-2 items-center my-2">
+            <Link href="/" className="flex gap-4 items-center my-4">
               <ActivityIcon />
               <SheetTitle className="text-md">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>Services</AccordionTrigger>
                     <AccordionContent>
-                      <Link href="/" className="flex gap-2 items-center my-2">
+                      <Link href="/" className="flex gap-4 items-center my-4">
                         <SheetTitle>Service 1</SheetTitle>
                       </Link>
-                      <Link href="/" className="flex gap-2 items-center my-2">
+                      <Link href="/" className="flex gap-4 items-center my-4">
                         <SheetTitle>Service 2</SheetTitle>
                       </Link>
-                      <Link href="/" className="flex gap-2 items-center my-2">
+                      <Link href="/" className="flex gap-4 items-center my-4">
                         <SheetTitle>Service 3</SheetTitle>
                       </Link>
                     </AccordionContent>
@@ -126,13 +126,17 @@ const Header = () => {
                 </Accordion>
               </SheetTitle>
             </Link>
-            <Link href="/" className="flex gap-2 items-center my-2">
+            <Link href="/" className="flex gap-4 items-center my-4">
               <SquareChartGanttIcon />
               <SheetTitle className="text-md">Product</SheetTitle>
             </Link>
-            <Link href="/" className="flex gap-2 items-center my-2">
+            <Link href="/" className="flex gap-4 items-center my-4">
               <InfoIcon />
               <SheetTitle className="text-md">About us</SheetTitle>
+            </Link>
+            <Link href="/" className="flex gap-4 items-center my-4">
+              <LogInIcon />
+              <SheetTitle className="text-md">Login</SheetTitle>
             </Link>
           </SheetContent>
         </Sheet>
