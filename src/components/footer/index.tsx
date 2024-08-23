@@ -1,130 +1,130 @@
-import React from "react";
-import { Zap } from "lucide-react";
+import React from 'react'
+import { Zap } from 'lucide-react'
 
 type MenuItemsType = {
-  title: string;
+  title: string
   items: {
-    subtitle: string;
-    href: string;
-  }[];
-}[];
+    subtitle: string
+    href: string
+  }[]
+}[]
 
 const menuItems: MenuItemsType = [
   {
-    title: "Platform",
+    title: 'Platform',
     items: [
       {
-        subtitle: "Analytics",
-        href: "/analytics",
+        subtitle: 'Analytics',
+        href: '/analytics',
       },
       {
-        subtitle: "Planning",
-        href: "/analytics",
+        subtitle: 'Planning',
+        href: '/analytics',
       },
       {
-        subtitle: "Collaboration",
-        href: "/analytics",
+        subtitle: 'Collaboration',
+        href: '/analytics',
       },
       {
-        subtitle: "Data Management",
-        href: "/analytics",
+        subtitle: 'Data Management',
+        href: '/analytics',
       },
       {
-        subtitle: "Integrations",
-        href: "/analytics",
+        subtitle: 'Integrations',
+        href: '/analytics',
       },
       {
-        subtitle: "Security",
-        href: "/analytics",
+        subtitle: 'Security',
+        href: '/analytics',
       },
     ],
   },
   {
-    title: "Resources",
+    title: 'Resources',
     items: [
       {
-        subtitle: "Customer",
-        href: "/analytics",
+        subtitle: 'Customer',
+        href: '/analytics',
       },
       {
-        subtitle: "Strategy Finance",
-        href: "/analytics",
+        subtitle: 'Strategy Finance',
+        href: '/analytics',
       },
       {
-        subtitle: "Ebooks & Guides",
-        href: "/analytics",
+        subtitle: 'Ebooks & Guides',
+        href: '/analytics',
       },
       {
-        subtitle: "Webinars & Events",
-        href: "/analytics",
+        subtitle: 'Webinars & Events',
+        href: '/analytics',
       },
       {
-        subtitle: "Postcast & Videos",
-        href: "/analytics",
+        subtitle: 'Postcast & Videos',
+        href: '/analytics',
       },
     ],
   },
   {
-    title: "Solutions",
+    title: 'Solutions',
     items: [
       {
-        subtitle: "Financial",
-        href: "/analytics",
+        subtitle: 'Financial',
+        href: '/analytics',
       },
       {
-        subtitle: "Investors & CEOs",
-        href: "/analytics",
+        subtitle: 'Investors & CEOs',
+        href: '/analytics',
       },
       {
-        subtitle: "Revenue Operations",
-        href: "/analytics",
+        subtitle: 'Revenue Operations',
+        href: '/analytics',
       },
       {
-        subtitle: "Sales & Marketing",
-        href: "/analytics",
+        subtitle: 'Sales & Marketing',
+        href: '/analytics',
       },
       {
-        subtitle: "Human Resources",
-        href: "/analytics",
+        subtitle: 'Human Resources',
+        href: '/analytics',
       },
     ],
   },
   {
-    title: "Resources",
+    title: 'Resources',
     items: [
       {
-        subtitle: "Customer",
-        href: "/analytics",
+        subtitle: 'Customer',
+        href: '/analytics',
       },
       {
-        subtitle: "Strategy Finance",
-        href: "/analytics",
+        subtitle: 'Strategy Finance',
+        href: '/analytics',
       },
       {
-        subtitle: "Ebooks & Guides",
-        href: "/analytics",
+        subtitle: 'Ebooks & Guides',
+        href: '/analytics',
       },
       {
-        subtitle: "Webinars & Events",
-        href: "/analytics",
+        subtitle: 'Webinars & Events',
+        href: '/analytics',
       },
       {
-        subtitle: "Postcast & Videos",
-        href: "/analytics",
+        subtitle: 'Postcast & Videos',
+        href: '/analytics',
       },
       {
-        subtitle: "Matrics Catelog",
-        href: "/analytics",
+        subtitle: 'Matrics Catelog',
+        href: '/analytics',
       },
     ],
   },
-];
+]
 
 const Footer = () => {
   return (
-    <footer className="border-t-[2px] md:text-base text-sm">
+    <footer className="border-t-[2px] md:text-base text-sm bg-white dark:bg-[#221C38]">
       <div className="md:py-20 py-10 align-element">
-        <div className="grid md:grid-cols-5 grid-cols-1 gap-y-6 justify-items-center md:text-left text-center">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-y-6 justify-items-center md:text-left text-center">
           <div className="md:space-y-6 space-y-2">
             <div className="flex gap-2 items-center">
               <div className="p-2 bg-black rounded-full">
@@ -140,11 +140,7 @@ const Footer = () => {
               </span>
             </div>
             <div>
-              <a
-                href="mailto:gostock@example.com"
-                target="_top"
-                className="font-bold underline"
-              >
+              <a href="mailto:gostock@example.com" target="_top" className="font-bold underline">
                 gostock@example.com
               </a>
             </div>
@@ -158,24 +154,27 @@ const Footer = () => {
                     {item.items.map((item) => {
                       return (
                         <li key={item.subtitle} className="my-2">
-                          <a href={item.href}>{item.subtitle}</a>
+                          <a
+                            href={item.href}
+                            className="relative inline-block text-black dark:text-white before:absolute before:w-0 before:h-[2px] before:bottom-0 before:left-0 before:bg-black before:dark:bg-white before:transition-all before:duration-300 hover:before:w-full"
+                          >
+                            {item.subtitle}
+                          </a>
                         </li>
-                      );
+                      )
                     })}
                   </ul>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
       <div className="bg-black">
-        <p className="text-center uppercase text-white py-4">
-          @ 2022 copyright - GoStock
-        </p>
+        <p className="text-center uppercase text-white py-4">@ 2022 copyright - GoStock</p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

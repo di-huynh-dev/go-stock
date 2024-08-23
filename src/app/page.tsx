@@ -1,13 +1,15 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Footer from '@/src/components/footer'
+import Header from '@/src/components/header'
+import TopBanner from './(guest)/home/components/TopBanner'
+import Content from './(guest)/home/components/Content'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
-      Home Page
-      <div className="h-[600px]"></div>
+      <TopBanner />
+      <Content />
       <Footer />
-    </div>
-  );
+    </>
+  )
 }
