@@ -94,7 +94,7 @@ const Header = () => {
         </div>
 
         <Sheet>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center lg:hidden">
             <ModeToggle />
             <SheetTrigger className="flex gap-2 items-center">
               <Menu className="lg:hidden block" />
