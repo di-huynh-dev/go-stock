@@ -34,7 +34,7 @@ const DashboardNavItems = ({ items, setOpen, isMobileNav = false }: DashboardNav
 
           return (
             <div key={index}>
-              <Tooltip key={index}>
+              <Tooltip>
                 <TooltipTrigger asChild>
                   <Collapsible open={isOpenCollapsible} onOpenChange={setIsOpenCollapsible}>
                     <div className={cn('', item.subItems && 'flex items-center justify-between gap-2')}>
@@ -57,7 +57,7 @@ const DashboardNavItems = ({ items, setOpen, isMobileNav = false }: DashboardNav
                           ''
                         )}
                       </Link>
-                      {isMobileNav || (!isMinimized && !isMobileNav && item.subItems) ? (
+                      {!isMinimized && item.subItems ? (
                         <>
                           <Collapsible open={isOpenCollapsible} onOpenChange={setIsOpenCollapsible}>
                             <div className="flex items-center justify-between gap-2">

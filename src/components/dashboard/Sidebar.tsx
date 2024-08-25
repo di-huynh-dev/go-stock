@@ -1,17 +1,6 @@
 'use client'
 
-import {
-  ArrowUpIcon,
-  ChevronLeftIcon,
-  CoinsIcon,
-  ContactIcon,
-  EarthIcon,
-  HomeIcon,
-  NewspaperIcon,
-  SettingsIcon,
-  WalletIcon,
-  ZapIcon,
-} from 'lucide-react'
+import { ArrowUpIcon, ChevronLeftIcon, ZapIcon } from 'lucide-react'
 import React from 'react'
 import { cn } from '@/src/lib/utils'
 import { useSidebar } from '@/src/hooks/useSidebar'

@@ -17,7 +17,7 @@ export default function RootLayout({
       <Sidebar />
       <main className="w-full flex-1 overflow-hidden">
         <Header />
-        {children}
+        <div className="bg-[#F5F7F9] dark:bg-gray-900">{children}</div>
       </main>
     </div>
   )

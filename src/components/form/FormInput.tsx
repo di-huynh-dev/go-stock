@@ -7,17 +7,21 @@ type FormInputProps = {
   label?: string
   placeholder?: string
   defaultValue?: string
+  icon?: React.ReactNode
 }
 
 function FormInput(props: FormInputProps) {
-  const { label, name, type, placeholder, defaultValue } = props
+  const { label, name, type, placeholder, defaultValue, icon } = props
 
   return (
     <div className="mb-2">
       <Label htmlFor={name} className="capitalize">
         {label || name}
       </Label>
-      <Input id={name} type={type} name={name} placeholder={placeholder} defaultValue={defaultValue} required />
+      <div className="flex items-center gap-2">
+        {icon}
+        <Input id={name} type={type} name={name} placeholder={placeholder} defaultValue={defaultValue} required />
+      </div>
     </div>
   )
 }

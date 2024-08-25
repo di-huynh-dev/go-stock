@@ -11,9 +11,7 @@ import { SocialIcon } from 'react-social-icons'
 const LoginPage = () => {
   const handleLogin = async (prevState: any, formData: FormData) => {
     const rawData = Object.fromEntries(formData)
-    console.log('====================================')
     console.log(rawData)
-    console.log('====================================')
     return {
       message: 'Login success!',
     }
@@ -22,17 +20,17 @@ const LoginPage = () => {
   return (
     <div className="bg-gradient-to-t from-[#16112B] to-[#2D2453] h-screen w-full flex items-center">
       <div className="lg:mx-20 md:mx-10 bg-white rounded-2xl">
-        <div className="grid lg:grid-cols-2">
+        <div className="grid lg:grid-cols-2 dark:bg-[#221C38] rounded-2xl">
           <Image src={LoginImage} alt="Login image" className="w-full h-full rounded-2xl" objectFit="cover" />
           <div className="border p-8 rounded-2xl">
-            <div>
+            <div className="">
               <FormContainer action={handleLogin}>
                 <div className="md:mx-20 mx-10">
                   <div className="flex gap-2 items-center justify-center">
-                    <div className="bg-white rounded-full">
-                      <Zap className="text-[#221C38] w-16 h-16" />
+                    <div className="bg-white dark:bg-[#16112B] rounded-full">
+                      <Zap className="text-[#221C38] dark:text-white w-16 h-16" />
                     </div>
-                    <span className="font-bold md:text-2xl text-xl">GoStock</span>
+                    <span className="font-bold md:text-2xl text-xl ">GoStock</span>
                   </div>
                   <p className="md:text-2xl text-xl text-center mb-4 font-semibold">Welcom to GoStock</p>
                   <p className="text-center text-gray-500 my-2">Monitor the stocks easily and accurately</p>
@@ -52,7 +50,7 @@ const LoginPage = () => {
                       </a>
                     </p>
                     <p className="my-6 text-sm">
-                      <a href="/auth/register" className="text-[#637DFF]">
+                      <a href="/auth/forgot-password" className="text-[#637DFF]">
                         Forgot your password?
                       </a>
                     </p>

@@ -4,22 +4,17 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/src/components/ui/ca
 import Link from 'next/link'
 import React from 'react'
 
-const VerifyOTPPage = () => {
+const ResetPassword = () => {
   return (
     <div className="bg-gradient-to-t from-[#16112B] to-[#2D2453] h-screen w-full flex items-center">
       <Card className=" mx-auto flex  items-center">
         <CardHeader>
-          <CardTitle className="text-center">Forgot Password</CardTitle>
+          <CardTitle className="text-center">Reset Password</CardTitle>
           <CardContent>
-            <p className="text-sm text-slate-500 my-4">Enter your email and we will send you a password reset link</p>
-            <FormInput type="text" placeholder="nguyenvana@example.com" name="email" label="Your registered email" />
-            <Link href="/auth/forgot-password/verify-otp">
-              <SubmitButton
-                text="Get OTP"
-                size="lg"
-                className="bg-black dark:bg-white rounded-full mt-3 w-1/2 md:p-0"
-              />
-            </Link>
+            <p className="text-sm text-slate-500 my-4">Entern your new password and confirm it</p>
+            <FormInput type="password" placeholder="**********" name="new-password" label="New password" />
+            <FormInput type="password" placeholder="**********" name="confirm-password" label="Confirm password" />
+            <SubmitButton text="Reset" size="lg" className="bg-black dark:bg-white rounded-full mt-3 w-1/2 md:p-0" />
           </CardContent>
           <Link href="/auth/login" className="text-[#637DFF] text-center">
             Back to Sign in
@@ -30,4 +25,4 @@ const VerifyOTPPage = () => {
   )
 }
 
-export default VerifyOTPPage
+export default ResetPassword

@@ -1,25 +1,31 @@
 'use client'
-import { useFormState } from 'react-dom'
+import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
 import { useToast } from '@/src/components/ui/use-toast'
-import { actionFunction } from '@/src/types/actions.type'
-
-const initialState = {
-  message: '',
-}
 
 function FormContainer({ action, children }: { action: actionFunction; children: React.ReactNode }) {
-  const [state, formAction] = useFormState(action, initialState)
+  const {
+    handleSubmit,
+    reset,
+    watch,
+    formState: { isSubmitting },
+  } = useForm()
+
   const { toast } = useToast()
 
-  useEffect(() => {
-    if (state.message) {
+  const onSubmit = async (data: any) => {
+    const result = await action(data)
+    if (result.message) {
       toast({
-        description: state.message,
+        description: result.message,
       })
+      reset() // Reset form after successful submission
     }
-  }, [state])
-  return <form action={formAction}>{children}</form>
+  }
+
+  return <form onSubmit={handleSubmit(onSubmit)}>{children}</form>
 }
 
 export default FormContainer
+
+export type actionFunction = (data: any) => Promise<{ message: string }>
