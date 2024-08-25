@@ -7,10 +7,15 @@ import Image from 'next/image'
 import { Zap } from 'lucide-react'
 import { SubmitButton } from '@/src/components/form/SubmitButton'
 import { SocialIcon } from 'react-social-icons'
+import { useRouter } from 'next/navigation'
 
 const LoginPage = () => {
+  const router = useRouter()
   const handleLogin = async (data: any) => {
-    return { message: 'Signin successful!' }
+    setTimeout(() => {
+      router.push('/dashboard')
+    }, 1000)
+    return { message: 'Login successful!' }
   }
 
   return (
