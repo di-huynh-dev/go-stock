@@ -9,12 +9,8 @@ import { SubmitButton } from '@/src/components/form/SubmitButton'
 import { SocialIcon } from 'react-social-icons'
 
 const LoginPage = () => {
-  const handleLogin = async (prevState: any, formData: FormData) => {
-    const rawData = Object.fromEntries(formData)
-    console.log(rawData)
-    return {
-      message: 'Login success!',
-    }
+  const handleLogin = async (data: any) => {
+    return { message: 'Signin successful!' }
   }
 
   return (
